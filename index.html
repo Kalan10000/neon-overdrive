@@ -859,6 +859,11 @@
             document.getElementById('final-score').innerText = score;
             document.getElementById('high-score').innerText = highScore;
             document.getElementById('gameover-screen').classList.remove('hidden');
+            // Example when Labyrinthe (gameId = 0) game is over:
+            const finalScore = score;
+            const arcadeHubURL = "https://jojosarcade.vercel.app/";
+
+            window.location.href = `${arcadeHubURL}?gameId=0&score=${finalScore}`;
         }
 
         let gridOffset = 0;
